@@ -1,0 +1,30 @@
+services:
+  js-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    init: true
+    restart: unless-stopped
+    env_file: ./backend/.env
+    ports:
+      - "5000:3000" # Expose backend API
+    networks:
+      - appnet
+
+  js-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    init: true
+    restart: unless-stopped
+    env_file: ./frontend/.env
+    ports:
+      - "5173:80" # Map container port 80 to host port 5173
+    networks:
+      - appnet
+    depends_on:
+      - js-backend # Ensure backend is up before frontend starts
+
+networks:
+  appnet:
+    driver: bridge

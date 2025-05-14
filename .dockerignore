@@ -1,0 +1,77 @@
+# Node.js dependencies
+node_modules/
+
+# Build outputs
+build/
+dist/
+out/
+
+# Test and debug artifacts
+test/
+tests/
+*.log
+debug/
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Version control
+.git/
+.gitignore
+.svn/
+.hg/
+
+# Environment and secrets
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.crt
+config.local.*
+*.local.yml
+
+# Temporary and local files
+tmp/
+temp/
+*.tmp
+.local/
+local/
+
+# Documentation
+README*
+*.md
+docs/
+
+# Docker files
+Dockerfile*
+docker-compose*
+
+# Kubernetes files
+kubernetes/
+*.yml
+*.yaml
+
+# Miscellaneous
+*.DS_Store
+Thumbs.db
+
+# Python cache (in case of mixed projects)
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+
+# Go cache (in case of mixed projects)
+/vendor/
+*.test
+.go-cache/
+
+# Java cache (in case of mixed projects)
+target/
+*.class
+.gradle/
